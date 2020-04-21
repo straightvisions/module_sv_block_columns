@@ -15,12 +15,12 @@
 	if($margin) {
 		$imploded		= false;
 		foreach($margin as $breakpoint => $val) {
-			$top = (isset($val['top']) && strlen($val['top']) > 0) ? $val['top'] : 0;
-			$right = (isset($val['right']) && strlen($val['right']) > 0) ? $val['right'] : 0;
-			$bottom = (isset($val['bottom']) && strlen($val['bottom']) > 0) ? $val['bottom'] : 0;
-			$left = (isset($val['left']) && strlen($val['left']) > 0) ? $val['left'] : 0;
+			$top = (isset($val['top']) && strlen($val['top']) > 0) ? $val['top'] : false;
+			$right = (isset($val['right']) && strlen($val['right']) > 0) ? $val['right'] : false;
+			$bottom = (isset($val['bottom']) && strlen($val['bottom']) > 0) ? $val['bottom'] : false;
+			$left = (isset($val['left']) && strlen($val['left']) > 0) ? $val['left'] : false;
 
-			if($top+$right+$bottom+$left!==0) {
+			if($top !== false || $right !== false || $bottom !== false || $left !== false) {
 				$imploded[$breakpoint] = $top . ' ' . $right . ' ' . $bottom . ' ' . $left;
 			}
 		}
@@ -34,12 +34,12 @@
 	if($padding) {
 		$imploded		= false;
 		foreach($padding as $breakpoint => $val) {
-			$top = (isset($val['top']) && strlen($val['top']) > 0) ? $val['top'] : 0;
-			$right = (isset($val['right']) && strlen($val['right']) > 0) ? $val['right'] : 0;
-			$bottom = (isset($val['bottom']) && strlen($val['bottom']) > 0) ? $val['bottom'] : 0;
-			$left = (isset($val['left']) && strlen($val['left']) > 0) ? $val['left'] : 0;
+			$top = (isset($val['top']) && strlen($val['top']) > 0) ? $val['top'] : false;
+			$right = (isset($val['right']) && strlen($val['right']) > 0) ? $val['right'] : false;
+			$bottom = (isset($val['bottom']) && strlen($val['bottom']) > 0) ? $val['bottom'] : false;
+			$left = (isset($val['left']) && strlen($val['left']) > 0) ? $val['left'] : false;
 
-			if($top+$right+$bottom+$left!==0) {
+			if($top !== false || $right !== false || $bottom !== false || $left !== false) {
 				$imploded[$breakpoint] = $top . ' ' . $right . ' ' . $bottom . ' ' . $left;
 			}
 		}
@@ -74,6 +74,6 @@
 	}
 
 	echo $setting->build_css(
-		'.wp-block-columns',
+		is_admin() ? '.edit-post-visual-editor.editor-styles-wrapper .wp-block-columns' : '.sv100_sv_content_wrapper article .wp-block-columns',
 		$properties
 	);
