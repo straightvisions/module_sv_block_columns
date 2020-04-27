@@ -52,12 +52,20 @@
 		}
 
 		protected function register_scripts(): sv_block_columns {
-			// Register Styles
-			$this->get_script( 'default' )
+			$this->get_script('block')
+				->set_path('lib/backend/js/block.js')
+				->set_type('js')
 				->set_is_gutenberg()
-				->set_path( 'lib/frontend/css/default.css' );
+				->set_is_backend()
+				->set_deps(array('wp-blocks', 'wp-dom'))
+				->set_is_enqueued();
 
-			$this->get_script( 'inline_config' )
+			// Register Styles
+			$this->get_script( 'common' )
+				->set_is_gutenberg()
+				->set_path( 'lib/frontend/css/common.css' );
+
+			$this->get_script( 'config' )
 				->set_is_gutenberg()
 				->set_path( 'lib/frontend/css/config.php' )
 				->set_inline( true );
@@ -72,8 +80,8 @@
 				return $this;
 			}
 
-			$this->get_script( 'default' )->set_is_enqueued();
-			$this->get_script( 'inline_config' )->set_is_enqueued();
+			$this->get_script( 'common' )->set_is_enqueued();
+			$this->get_script( 'config' )->set_is_enqueued();
 
 			return $this;
 		}

@@ -1,0 +1,21 @@
+/* Columns Block */
+.wp-block-columns{
+	word-break: normal;
+	overflow-wrap: normal;
+	max-width:100%;
+}
+
+/* Columns Block */
+.wp-block-columns.is-style-equal_height{
+	word-break: normal;
+	overflow-wrap: normal;
+	max-width:100%;
+}
+.wp-block-columns.is-style-equal_height .wp-block-column{
+	display: flex;
+	flex-direction: column;
+}
+.wp-block-columns.is-style-equal_height .wp-block-column > *:last-child{
+	display:flex;
+	flex: 1 1 auto;
+}
