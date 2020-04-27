@@ -2,6 +2,11 @@
 	<div class="sv_section_description"><?php echo $module->get_section_desc(); ?></div>
 	<div class="sv_setting_flex">
 		<?php
+			echo $module->get_setting( 'stack_active' )->form();
+		?>
+	</div>
+	<div class="sv_setting_flex">
+		<?php
 			echo $module->get_setting( 'margin' )->form();
 			echo $module->get_setting( 'padding' )->form();
 		?>

@@ -27,6 +27,12 @@
 		}
 
 		protected function load_settings(): sv_block_columns {
+			$this->get_setting( 'stack_active' )
+				->set_title( __( 'Stack Columns', 'sv100' ) )
+				->set_description( __( 'You may want to stack Columns on narrow viewports.', 'sv100' ) )
+				->set_is_responsive(true)
+				->load_type( 'checkbox' );
+
 			$this->get_setting( 'margin' )
 				->set_title( __( 'Margin', 'sv100' ) )
 				->set_is_responsive(true)

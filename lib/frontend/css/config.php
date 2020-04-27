@@ -11,6 +11,13 @@
 
 	$properties					= array();
 
+	// maybe stack
+	$stack = array_map(function ($val) {
+		return $val ? 'block' : 'flex';
+	}, $stack_active);
+
+	$properties['display']	= $setting->prepare_css_property_responsive($stack,'','');
+
 	// Margin
 	if($margin) {
 		$imploded		= false;
@@ -75,5 +82,34 @@
 
 	echo $setting->build_css(
 		is_admin() ? '.edit-post-visual-editor.editor-styles-wrapper .wp-block-columns' : '.sv100_sv_content_wrapper article .wp-block-columns',
+		$properties
+	);
+
+
+	// maybe stack -> remove margin left when stacked
+	$properties					= array();
+	$stack = array_map(function ($val) {
+		return $val ? '30px auto 0px auto !important' : '0px 0px 0px 32px !important';
+	}, $stack_active);
+
+	$properties['margin']	= $setting->prepare_css_property_responsive($stack,'','');
+
+	echo $setting->build_css(
+		is_admin() ? '.edit-post-visual-editor.editor-styles-wrapper .wp-block-columns .wp-block-column:not(:first-child)' : '.sv100_sv_content_wrapper article .wp-block-columns .wp-block-column:not(:first-child)',
+		$properties
+	);
+
+
+	// maybe stack -> add max width text when stacked
+	$properties					= array();
+
+	$stack_max_width = array_map(function ($val) {
+		return $val ? 'var( --sv100_sv_common-max-width-text ) !important' : 'inherit !important';
+	}, $stack_active);
+
+	$properties['max-width']	= $setting->prepare_css_property_responsive($stack_max_width,'','');
+
+	echo $setting->build_css(
+		is_admin() ? '.edit-post-visual-editor.editor-styles-wrapper .wp-block-columns .wp-block-column' : '.sv100_sv_content_wrapper article .wp-block-columns .wp-block-column',
 		$properties
 	);
