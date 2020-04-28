@@ -19,3 +19,6 @@
 	display:flex;
 	flex: 1 1 auto;
 }
+.sv100_sv_content_wrapper article .wp-block-columns .wp-block-column{
+	 margin: 0px auto 0px auto;
+}
