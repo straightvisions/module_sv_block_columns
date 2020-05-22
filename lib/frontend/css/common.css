@@ -15,9 +15,13 @@
 	display: flex;
 	flex-direction: column;
 }
+.wp-block-columns.is-style-equal_height .wp-block-column > *{
+	width:100%;
+}
 .wp-block-columns.is-style-equal_height .wp-block-column > *:last-child{
 	display:flex;
 	flex: 1 1 auto;
+	align-items: flex-end;
 }
 .sv100_sv_content_wrapper article .wp-block-columns .wp-block-column{
 	 margin: 0px auto 0px auto;
