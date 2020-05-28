@@ -1,6 +1,7 @@
 /* Columns Block */
 .wp-block-columns{
 	max-width:100%;
+	justify-content: space-between;
 }
 .wp-block-column{ /* Overwrite Gutenberg CSS Default Behavior */
 	word-break: normal !important;
@@ -17,7 +18,4 @@
 	display:flex;
 	flex: 1 1 auto;
 	align-items: flex-end;
-}
-.sv100_sv_content_wrapper article .wp-block-columns .wp-block-column{
-	 margin: 0px auto 0px auto;
 }
