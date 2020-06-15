@@ -1,6 +1,6 @@
 /* Columns Block */
 .wp-block-columns{
-	max-width:100%;
+
 	justify-content: space-between;
 }
 .wp-block-column{ /* Overwrite Gutenberg CSS Default Behavior */
