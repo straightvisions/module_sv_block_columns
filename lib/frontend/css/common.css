@@ -4,6 +4,7 @@
 	justify-content: space-between;
 }
 .wp-block-column{ /* Overwrite Gutenberg CSS Default Behavior */
+	width:100%;
 	word-break: normal !important;
 	overflow-wrap: normal !important;
 }

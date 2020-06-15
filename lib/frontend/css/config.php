@@ -26,6 +26,7 @@
 		)
 	);
 	
+	$properties					= array();
 	$stack = array_map(function ($val) {
 		return $val ? '20px' : '0';
 	}, $stack_active->get_data());
