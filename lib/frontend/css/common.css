@@ -26,6 +26,10 @@
 	--straightvisions-sv-columns-grid-base: 15px;
 }
 
+.sv100_sv_content_wrapper .wp-block-columns.alignfull{
+	width:100%;
+}
+
 .sv100_sv_content_wrapper .wp-block-columns > .wp-block-column{
 	margin-left: var(--straightvisions-sv-columns-grid-base);
 	margin-right: var(--straightvisions-sv-columns-grid-base);
