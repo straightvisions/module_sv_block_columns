@@ -33,7 +33,7 @@
 .sv100_sv_content_wrapper .wp-block-columns > .wp-block-column{
 	margin-left: var(--straightvisions-sv-columns-grid-base);
 	margin-right: var(--straightvisions-sv-columns-grid-base);
-	margin-bottom: calc(var(--straightvisions-sv-columns-grid-base) * 2);
+	/*margin-bottom: calc(var(--straightvisions-sv-columns-grid-base) * 2);*/
 }
 
 /* sv columns manager support */
@@ -49,4 +49,8 @@
 
 .wp-block-straightvisions-sv-columns-manager > .wp-block-columns.alignfull{
 	max-width: calc( var( --sv100_sv_common-max-width-alignfull ) + 2 * var(--straightvisions-sv-columns-grid-base));
+}
+
+.wp-block-straightvisions-sv-columns-manager[class*="-col"] > .wp-block-columns > .wp-block-column{
+	margin-bottom: calc(var(--straightvisions-sv-columns-grid-base) * 2);
 }
