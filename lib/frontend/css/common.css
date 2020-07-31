@@ -2,8 +2,7 @@
 .wp-block-columns{
 	justify-content: space-between;
 }
-.wp-block-column{ /* Overwrite Gutenberg CSS Default Behavior */
-	/*width:100%;*/
+.wp-block-column{ /* obsolete? */
 	word-break: normal !important;
 	overflow-wrap: normal !important;
 }
@@ -18,4 +17,32 @@
 	display:flex;
 	flex: 1 1 auto;
 	align-items: flex-end;
+}
+
+/*
+/* normalize block behaviour */
+/* base 15 30 45 60 */
+:root {
+	--straightvisions-sv-columns-grid-base: 15px;
+}
+
+.sv100_sv_content_wrapper .wp-block-columns > .wp-block-column{
+	margin-left: var(--straightvisions-sv-columns-grid-base);
+	margin-right: var(--straightvisions-sv-columns-grid-base);
+	margin-bottom: calc(var(--straightvisions-sv-columns-grid-base) * 2);
+}
+
+/* sv columns manager support */
+/* align element border vertically */
+.wp-block-straightvisions-sv-columns-manager > .wp-block-columns{
+	margin-left: calc(-1 * var(--straightvisions-sv-columns-grid-base));
+	margin-right: calc(-1 * var(--straightvisions-sv-columns-grid-base));
+}
+
+.wp-block-straightvisions-sv-columns-manager > .wp-block-columns.alignwide{
+	max-width: calc( var( --sv100_sv_common-max-width-alignwide ) + 2 * var(--straightvisions-sv-columns-grid-base));
+}
+
+.wp-block-straightvisions-sv-columns-manager > .wp-block-columns.alignfull{
+	max-width: calc( var( --sv100_sv_common-max-width-alignfull ) + 2 * var(--straightvisions-sv-columns-grid-base));
 }
