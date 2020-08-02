@@ -1,56 +1,10 @@
-/* Columns Block */
-.wp-block-columns{
-	justify-content: space-between;
-}
-.wp-block-column{ /* obsolete? */
-	word-break: normal !important;
-	overflow-wrap: normal !important;
-}
-.wp-block-columns.is-style-equal_height .wp-block-column{
-	display: flex;
-	flex-direction: column;
-}
-.wp-block-columns.is-style-equal_height .wp-block-column > *{
-	width:100%;
-}
-.wp-block-columns.is-style-equal_height .wp-block-column > *:last-child{
+.wp-block-columns > .wp-block-column{
 	display:flex;
-	flex: 1 1 auto;
-	align-items: flex-end;
+	flex-direction:column;
+	margin-bottom:32px;
 }
 
-/*
-/* normalize block behaviour */
-/* base 15 30 45 60 */
-:root {
-	--straightvisions-sv-columns-grid-base: 15px;
-}
-
-.sv100_sv_content_wrapper .wp-block-columns.alignfull{
+/* all items within a column should be 100% width */
+.wp-block-columns > .wp-block-column > *{
 	width:100%;
-}
-
-.sv100_sv_content_wrapper .wp-block-columns > .wp-block-column{
-	margin-left: var(--straightvisions-sv-columns-grid-base);
-	margin-right: var(--straightvisions-sv-columns-grid-base);
-	/*margin-bottom: calc(var(--straightvisions-sv-columns-grid-base) * 2);*/
-}
-
-/* sv columns manager support */
-/* align element border vertically */
-.wp-block-straightvisions-sv-columns-manager > .wp-block-columns{
-	margin-left: calc(-1 * var(--straightvisions-sv-columns-grid-base));
-	margin-right: calc(-1 * var(--straightvisions-sv-columns-grid-base));
-}
-
-.wp-block-straightvisions-sv-columns-manager > .wp-block-columns.alignwide{
-	max-width: calc( var( --sv100_sv_common-max-width-alignwide ) + 2 * var(--straightvisions-sv-columns-grid-base));
-}
-
-.wp-block-straightvisions-sv-columns-manager > .wp-block-columns.alignfull{
-	max-width: calc( var( --sv100_sv_common-max-width-alignfull ) + 2 * var(--straightvisions-sv-columns-grid-base));
-}
-
-.wp-block-straightvisions-sv-columns-manager[class*="-col"] > .wp-block-columns > .wp-block-column{
-	margin-bottom: calc(var(--straightvisions-sv-columns-grid-base) * 2);
 }

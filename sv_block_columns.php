@@ -71,6 +71,10 @@
 				->set_is_gutenberg()
 				->set_path( 'lib/frontend/css/common.css' );
 
+			$this->get_script( 'style_equal_height' )
+				->set_is_gutenberg()
+				->set_path( 'lib/frontend/css/style_equal_height.css' );
+
 			$this->get_script( 'config' )
 				->set_is_gutenberg()
 				->set_path( 'lib/frontend/css/config.php' )
@@ -86,8 +90,9 @@
 				return $this;
 			}
 
-			$this->get_script( 'common' )->set_is_enqueued();
-			$this->get_script( 'config' )->set_is_enqueued();
+			foreach($this->get_scripts() as $script){
+				$script->set_is_enqueued();
+			}
 
 			return $this;
 		}
