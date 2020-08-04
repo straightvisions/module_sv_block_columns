@@ -1,0 +1,7 @@
+.wp-block-columns.is-style-no-margin-bottom{
+    margin-bottom:0;
+}
+
+.wp-block-columns.is-style-no-margin-bottom > .wp-block-column{
+    margin-bottom: 0 !important;
+}
