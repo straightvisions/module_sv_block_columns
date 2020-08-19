@@ -1,5 +1,5 @@
 .wp-block-columns.is-style-no-margin-bottom{
-    margin-bottom:0;
+    margin-bottom:0 !important;
 }
 
 .wp-block-columns.is-style-no-margin-bottom > .wp-block-column{
