@@ -31,6 +31,13 @@
 				->set_title( __( 'Stack Columns', 'sv100' ) )
 				->set_description( __( 'You may want to stack Columns on narrow viewports.', 'sv100' ) )
 				->set_is_responsive(true)
+				->set_default_value(array(
+					'mobile'						=> 1,
+					'mobile_landscape'				=> 1,
+					'tablet'						=> 1,
+					'tablet_landscape'				=> 0,
+					'desktop'						=> 0
+				))
 				->load_type( 'checkbox' );
 
 			$this->get_setting( 'margin' )
