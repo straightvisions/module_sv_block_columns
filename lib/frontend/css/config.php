@@ -26,20 +26,6 @@
 		)
 	);
 
-	$properties = array();
-	$stack = array_map(function ($val) {
-		return $val ? '20px' : '0';
-	}, $stack_active->get_data());
-	
-	$properties['margin-top']	= $stack_active->prepare_css_property_responsive($stack,'','');
-	
-	echo $_s->build_css(
-		is_admin() ? '.editor-styles-wrapper .wp-block-columns+.wp-block-columns' : '.sv100_sv_content_wrapper .wp-block-columns+.wp-block-columns',
-		array_merge(
-			$properties
-		)
-	);
-
 	// maybe stack -> add max width text when stacked
 	$properties					= array();
 
