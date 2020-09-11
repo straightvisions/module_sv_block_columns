@@ -36,6 +36,8 @@
 					'mobile_landscape'				=> 1,
 					'tablet'						=> 1,
 					'tablet_landscape'				=> 0,
+					'tablet_pro'					=> 0,
+					'tablet_pro_landscape'			=> 0,
 					'desktop'						=> 0
 				))
 				->load_type( 'checkbox' );
