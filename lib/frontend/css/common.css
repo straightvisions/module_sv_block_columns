@@ -1,7 +1,6 @@
 .wp-block-columns > .wp-block-column{
 	display:flex;
 	flex-direction:column;
-	margin-bottom:32px;
 }
 
 /* all items within a column should be 100% width */
