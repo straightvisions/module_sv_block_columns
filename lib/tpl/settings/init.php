@@ -3,9 +3,9 @@
 	<div class="sv_setting_subpages">
 		<ul class="sv_setting_subpages_nav"></ul>
 		<?php
-			require_once( $module->get_path( 'lib/backend/tpl/subpage_columns.php' ) );
-			require_once( $module->get_path( 'lib/backend/tpl/subpage_column.php' ) );
+			require_once( $module->get_path( 'lib/tpl/settings/general.php' ) );
+			require_once( $module->get_path( 'lib/backend/tpl/column.php' ) );
 		?>
 	</div>
-<?php } ?>
-
+	<?php
+}
