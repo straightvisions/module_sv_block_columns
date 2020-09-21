@@ -1,5 +1,5 @@
 <?php
-	$stack_active				= $script->get_parent()->get_setting('stack_active');
+	$stack_active				= $module->get_setting('stack_active');
 
 	// maybe stack
 	$properties					= array();
@@ -20,9 +20,9 @@
 		is_admin() ? '.editor-styles-wrapper .wp-block-columns' : '.sv100_sv_content_wrapper .wp-block-columns',
 		array_merge(
 			$properties,
-			$script->get_parent()->get_setting('padding')->get_css_data('padding'),
-			$script->get_parent()->get_setting('margin')->get_css_data(),
-			$script->get_parent()->get_setting('border')->get_css_data()
+			$module->get_setting('padding')->get_css_data('padding'),
+			$module->get_setting('margin')->get_css_data(),
+			$module->get_setting('border')->get_css_data()
 		)
 	);
 
