@@ -43,7 +43,7 @@
 	$properties = array();
 	// prevent wp margin
 	$stack = array_map(function ($val) {
-		return $val ? 0 : '32px'; // wp default
+		return $val ? 'auto' : '32px'; // wp default
 	}, $stack_active->get_data());
 
 	$properties['margin-left']	= $stack_active->prepare_css_property_responsive($stack,'','');
