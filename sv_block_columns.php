@@ -81,11 +81,11 @@
 			// Register Styles
 			$this->get_script( 'style_equal_height' )
 				->set_is_gutenberg()
-				->set_path( 'lib/frontend/css/style_equal_height.css' );
+				->set_path( 'lib/css/common/style_equal_height.css' );
 
 			$this->get_script( 'style_no_margin_bottom' )
 				->set_is_gutenberg()
-				->set_path( 'lib/frontend/css/style_no_margin_bottom.css' );
+				->set_path( 'lib/css/common/style_no_margin_bottom.css' );
 
 			return $this;
 		}
