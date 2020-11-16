@@ -1,18 +1,22 @@
+.wp-block-columns.is-style-equal_height .wp-block-column > *:first-child:last-child{
+	height:100%;
+}
+
 .wp-block-columns.is-style-equal_height .wp-block-column > *:last-child:not(:first-child){
-    display:flex;
-    flex: 1 1 auto;
-    align-items:flex-end;
+	display:flex;
+	flex: 1 1 auto;
+	align-items:flex-end;
 }
 
 /* alow alignment for last item (because we convert to flexbox) */
 .wp-block-columns.is-style-equal_height .wp-block-column > *.alignright{
-    justify-content: flex-end;
+	justify-content: flex-end;
 }
 
 .wp-block-columns.is-style-equal_height .wp-block-column > *.aligncenter{
-    justify-content: center;
+	justify-content: center;
 }
 
 .wp-block-columns.is-style-equal_height .wp-block-column > *.alignleft{
-    justify-content: flex-start;
+	justify-content: flex-start;
 }
