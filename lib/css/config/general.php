@@ -36,7 +36,7 @@
 	$properties['max-width']	= $stack_active->prepare_css_property_responsive($stack_max_width,'','');
 
 	echo $stack_active->build_css(
-		is_admin() ? '.edit-post-visual-editor.editor-styles-wrapper .wp-block-columns > .wp-block-column' : '.sv100_sv_content_wrapper .wp-block-columns > .wp-block-column',
+		is_admin() ? '.editor-styles-wrapper .wp-block-columns > .wp-block-column' : '.sv100_sv_content_wrapper .wp-block-columns > .wp-block-column',
 		$properties
 	);
 
@@ -49,6 +49,6 @@
 	$properties['margin-left']	= $stack_active->prepare_css_property_responsive($stack,'','');
 
 	echo $stack_active->build_css(
-		is_admin() ? '.edit-post-visual-editor.editor-styles-wrapper .wp-block-columns > .wp-block-column:not(:first-child)' : '.sv100_sv_content_wrapper .wp-block-columns > .wp-block-column:not(:first-child)',
+		is_admin() ? '.editor-styles-wrapper .wp-block-columns > .wp-block-column:not(:first-child)' : '.sv100_sv_content_wrapper .wp-block-columns > .wp-block-column:not(:first-child)',
 		$properties
 	);
