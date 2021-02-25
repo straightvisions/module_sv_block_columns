@@ -1,13 +1,4 @@
-.wp-block-columns.is-style-equal_height .wp-block-column > .wp-block-group:last-child > .wp-block-group__inner-container{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 100%;
-}
-.wp-block-columns.is-style-equal_height .wp-block-column > .wp-block-group:last-child > .wp-block-group__inner-container > *{
-	width:100%;
-}
-.wp-block-columns.is-style-equal_height .wp-block-column > .wp-block-group:last-child > .wp-block-group__inner-container > *:last-child{
+.wp-block-columns.is-style-equal_height .wp-block-column > *:last-child{
 	margin-top:auto;
 }
 
