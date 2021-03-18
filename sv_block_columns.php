@@ -87,6 +87,10 @@
 				->set_is_gutenberg()
 				->set_path( 'lib/css/common/style_no_margin_bottom.css' );
 
+			$this->get_script( 'style_no_margin_bottom_column' )
+				->set_is_gutenberg()
+				->set_path( 'lib/css/common/style_no_margin_bottom_column.css' );
+
 			return $this;
 		}
 		public function enqueue_scripts(): sv_block_columns {
