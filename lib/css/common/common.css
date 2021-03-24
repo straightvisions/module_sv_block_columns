@@ -3,7 +3,7 @@
 	flex-direction:column;
 	width:100%;
 }
-.wp-block-columns > .wp-block-column:first-child{
+*:not(".wp-block-straightvisions-sv-columns-manager") .wp-block-columns > .wp-block-column:first-child{
 	margin-left:0 !important;
 }
 
