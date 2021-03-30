@@ -1,5 +1,6 @@
 .wp-block-columns.is-style-equal_height .wp-block-column > *:last-child{
 	margin-top:auto;
+	height:100%;
 }
 
 /* allow alignment for last item (because we convert to flexbox) */
