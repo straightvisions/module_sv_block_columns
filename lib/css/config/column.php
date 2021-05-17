@@ -9,7 +9,8 @@
 	);
 
 	$properties					= array();
-
+	
+	/*
 	$stack_active				= $module->get_setting('stack_active');
 	$stack = array_map(function ($val) {
 		return boolval($val) ? '0' : 'invalid';
@@ -30,3 +31,4 @@
 			$properties
 		)
 	);
+	*/
