@@ -3,9 +3,6 @@
 	flex-direction:column;
 	width:100%;
 }
-.wp-block-columns > .wp-block-column:first-child{
-	margin-left:0 !important;
-}
 
 /* all items within a column should be 100% width */
 .wp-block-columns > .wp-block-column > *{
