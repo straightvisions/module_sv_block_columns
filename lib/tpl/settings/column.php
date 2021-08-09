@@ -3,7 +3,6 @@
 		<h2><?php _e('Column', 'sv100'); ?></h2>
 		<div class="sv_setting_flex">
 			<?php
-				echo $module->get_setting( 'single_margin' )->form();
 				echo $module->get_setting( 'single_padding' )->form();
 			?>
 		</div>

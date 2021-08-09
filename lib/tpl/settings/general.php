@@ -8,7 +8,6 @@
 		</div>
 		<div class="sv_setting_flex">
 			<?php
-				echo $module->get_setting( 'margin' )->form();
 				echo $module->get_setting( 'padding' )->form();
 			?>
 		</div>
