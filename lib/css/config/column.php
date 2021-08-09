@@ -7,27 +7,46 @@
 		)
 	);
 	
+	// get stack active settings val
+	$stack_active				= $module->get_setting('stack_active');
+	$spacing                    = 40;
+	
+	// margin bottom ---------------------------------------------------------------------------------------------------
 	$properties					= array();
 	
-	$stack_active				= $module->get_setting('stack_active');
-	$stack = array_map(function ($val) {
-		return boolval($val) ? '0' : 'invalid';
+	$stack_max_width = array_map(function ($val) {
+		return $val ? 'var( --sv100_sv_common-max-width-alignwide )' : '100%';
 	}, $stack_active->get_data());
 	
+	$properties['max-width']	= $stack_active->prepare_css_property_responsive($stack_max_width,'','');
+	
+	$stack_margin_bottom = array_map(function ($val) use ($spacing) {
+		return $val ? $spacing.'px' : '0';
+	}, $stack_active->get_data());
+	
+	$properties['margin-bottom']	= $stack_active->prepare_css_property_responsive($stack_margin_bottom,'','');
+	
+	// optimization
+	$properties['margin-bottom']['mobile'] = ($spacing / 2).'px';
+	$properties['margin-bottom']['mobile_landscape'] = ($spacing / 2).'px';
+	
+	// margin left -----------------------------------------------------------------------------------------------------
+	$properties					= array();
 
-	foreach($stack as $responsive => $val){
-		if($val === 'invalid'){
-			$stack[$responsive]		= '2em';
-		}
-	}
+	$stack = array_map(function ($val) use ($spacing) {
+		return boolval($val) ? '0' : $spacing.'px';
+	}, $stack_active->get_data());
 	
 	$properties['margin-left']	= $stack_active->prepare_css_property_responsive($stack,'','');
 	
-	echo $_s->build_css(
+	// optimization
+	$properties['margin-bottom']['mobile'] = (int)$properties['margin-bottom']['mobile'] != 0 ? $properties['margin-bottom']['mobile'] : ($spacing / 2).'px';
+	$properties['margin-bottom']['mobile_landscape'] = (int)$properties['margin-bottom']['mobile_landscape'] != 0 ? $properties['margin-bottom']['mobile_landscape'] : ($spacing / 2).'px';
+	
+	// -----------------------------------------------------------------------------------------------------------------
+	echo $stack_active->build_css(
 		is_admin() ? '.editor-styles-wrapper .wp-block-columns > .wp-block-column' : '.sv100_sv_content_wrapper .wp-block-columns > .wp-block-column',
-		array_merge(
-			$properties
-		)
+		$properties
 	);
 	
 	// SV Columns Manager Stack Support: No Margin left when stacked in block settings
