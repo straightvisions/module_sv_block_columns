@@ -34,12 +34,17 @@
 	
 	$properties['max-width']	= $stack_active->prepare_css_property_responsive($stack_max_width,'','');
 	
-	$stack_margin_bottom = array_map(function ($val) {
-		return $val ? '40px' : '0';
+	$spacing = 40;
+	
+	$stack_margin_bottom = array_map(function ($val) use ($spacing) {
+		return $val ? $spacing.'px' : '0';
 	}, $stack_active->get_data());
 	
 	$properties['margin-bottom']	= $stack_active->prepare_css_property_responsive($stack_margin_bottom,'','');
-	
+	// optimization
+	$properties['margin-bottom']['mobile'] = ($spacing / 2).'px';
+	$properties['margin-bottom']['mobile_landscape'] = ($spacing / 2).'px';
+
 	echo $stack_active->build_css(
 		is_admin() ? '.editor-styles-wrapper .wp-block-columns > .wp-block-column' : '.sv100_sv_content_wrapper .wp-block-columns > .wp-block-column',
 		$properties
