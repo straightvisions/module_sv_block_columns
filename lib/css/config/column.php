@@ -10,10 +10,9 @@
 	// get stack active settings val
 	$stack_active				= $module->get_setting('stack_active');
 	$spacing                    = 40;
-	
-	// margin bottom ---------------------------------------------------------------------------------------------------
 	$properties					= array();
 	
+	// margin bottom ---------------------------------------------------------------------------------------------------
 	$stack_max_width = array_map(function ($val) {
 		return $val ? 'var( --sv100_sv_common-max-width-alignwide )' : '100%';
 	}, $stack_active->get_data());
@@ -27,11 +26,10 @@
 	$properties['margin-bottom']	= $stack_active->prepare_css_property_responsive($stack_margin_bottom,'','');
 	
 	// optimization
-	$properties['margin-bottom']['mobile'] = ($spacing / 2).'px';
-	$properties['margin-bottom']['mobile_landscape'] = ($spacing / 2).'px';
+	$properties['margin-bottom']['mobile'] =  (int)$properties['margin-bottom']['mobile'] == 0 ? $properties['margin-bottom']['mobile'] : ($spacing / 2).'px';
+	$properties['margin-bottom']['mobile_landscape'] =  (int)$properties['margin-bottom']['mobile'] == 0 ? $properties['margin-bottom']['mobile'] : ($spacing / 2).'px';
 	
 	// margin left -----------------------------------------------------------------------------------------------------
-	$properties					= array();
 
 	$stack = array_map(function ($val) use ($spacing) {
 		return boolval($val) ? '0' : $spacing.'px';
@@ -40,17 +38,17 @@
 	$properties['margin-left']	= $stack_active->prepare_css_property_responsive($stack,'','');
 	
 	// optimization
-	$properties['margin-bottom']['mobile'] = (int)$properties['margin-bottom']['mobile'] != 0 ? $properties['margin-bottom']['mobile'] : ($spacing / 2).'px';
-	$properties['margin-bottom']['mobile_landscape'] = (int)$properties['margin-bottom']['mobile_landscape'] != 0 ? $properties['margin-bottom']['mobile_landscape'] : ($spacing / 2).'px';
-	
+	$properties['margin-left']['mobile'] = (int)$properties['margin-left']['mobile'] == 0 ? $properties['margin-left']['mobile'] : ($spacing / 2).'px';
+	$properties['margin-left']['mobile_landscape'] = (int)$properties['margin-left']['mobile_landscape'] == 0 ? $properties['margin-left']['mobile_landscape'] : ($spacing / 2).'px';
+
 	// -----------------------------------------------------------------------------------------------------------------
 	echo $stack_active->build_css(
 		is_admin() ? '.editor-styles-wrapper .wp-block-columns > .wp-block-column' : '.sv100_sv_content_wrapper .wp-block-columns > .wp-block-column',
 		$properties
 	);
-	
+
 	// SV Columns Manager Stack Support: No Margin left when stacked in block settings
-	
+	/*
 	if($this->get_instance('sv_columns_manager')) {
 		$states_col = array(
 			'mobile'				=> 'svcm-xs-h-col',
@@ -85,4 +83,4 @@
 				)
 			));
 		}
-	}
+	}*/
