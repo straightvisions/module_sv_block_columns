@@ -52,17 +52,6 @@
 				->set_is_responsive(true)
 				->load_type( 'border' );
 
-			$this->get_setting( 'single_margin' )
-				->set_title( __( 'Margin', 'sv100' ) )
-				->set_default_value(array(
-					'top'		=> '0',
-					'right'		=> 'auto',
-					'bottom'	=> '32px',
-					'left'		=> 'auto'
-				))
-				->set_is_responsive(true)
-				->load_type( 'margin' );
-
 			$this->get_setting( 'single_padding' )
 				->set_title( __( 'Padding', 'sv100' ) )
 				->set_is_responsive(true)
