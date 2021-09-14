@@ -4,6 +4,7 @@
 		<div class="sv_setting_flex">
 			<?php
 				echo $module->get_setting( 'stack_active' )->form();
+				echo $module->get_setting( 'spacing' )->form();
 			?>
 		</div>
 		<div class="sv_setting_flex">

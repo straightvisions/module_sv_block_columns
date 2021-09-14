@@ -47,6 +47,11 @@
 				->set_is_responsive(true)
 				->load_type( 'margin' );
 
+			$this->get_setting( 'spacing' )
+				->set_title( __( 'Spacing', 'sv100' ) )
+				->set_default_value(40)
+				->load_type( 'number' );
+
 			$this->get_setting( 'border' )
 				->set_title( __( 'Border', 'sv100' ) )
 				->set_is_responsive(true)

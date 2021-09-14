@@ -9,7 +9,7 @@
 	
 	// get stack active settings val
 	$stack_active				= $module->get_setting('stack_active');
-	$spacing                    = 40;
+	$spacing                    = $module->get_setting('spacing')->get_data();
 	$properties					= array();
 	
 	// margin bottom ---------------------------------------------------------------------------------------------------
