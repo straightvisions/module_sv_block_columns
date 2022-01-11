@@ -1,4 +1,7 @@
 /* reset first child */
-.sv100_sv_content_wrapper .wp-block-columns .wp-block-column:first-child{
-    margin-left:0;
+.wp-block-columns .wp-block-column:first-child{
+	margin-left:0;
+}
+.wp-block-columns {
+	justify-content: center;
 }
