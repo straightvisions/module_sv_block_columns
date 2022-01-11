@@ -43,6 +43,6 @@
 
 	// -----------------------------------------------------------------------------------------------------------------
 	echo $stack_active->build_css(
-		is_admin() ? '.editor-styles-wrapper .wp-block-columns > .wp-block-column' : '.sv100_sv_content_wrapper .wp-block-columns > .wp-block-column',
+		is_admin() ? '.editor-styles-wrapper .wp-block-columns > .wp-block-column:not(:first-child)' : '.sv100_sv_content_wrapper .wp-block-columns > .wp-block-column:not(:first-child)',
 		$properties
 	);
