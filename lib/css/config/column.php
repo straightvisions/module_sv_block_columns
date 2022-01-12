@@ -28,8 +28,14 @@
 	// optimization
 	$properties['margin-bottom']['mobile'] =  (int)$properties['margin-bottom']['mobile'] == 0 ? $properties['margin-bottom']['mobile'] : ($spacing / 2).'px';
 	$properties['margin-bottom']['mobile_landscape'] =  (int)$properties['margin-bottom']['mobile'] == 0 ? $properties['margin-bottom']['mobile'] : ($spacing / 2).'px';
-	
+
+	echo $stack_active->build_css(
+		is_admin() ? '.editor-styles-wrapper .wp-block-columns > .wp-block-column' : '.sv100_sv_content_wrapper .wp-block-columns > .wp-block-column',
+		$properties
+	);
+
 	// margin left -----------------------------------------------------------------------------------------------------
+	$properties					= array();
 
 	$stack = array_map(function ($val) use ($spacing) {
 		return boolval($val) ? '0' : $spacing.'px';
