@@ -2,7 +2,7 @@
 	display: flex;
 	margin-bottom: 1.75em;
 	box-sizing: border-box;
-	align-items: normal;
+	align-items: normal !important;
 	/**
 	* All Columns Alignment
 	*/
