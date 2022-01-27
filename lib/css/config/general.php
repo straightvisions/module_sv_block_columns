@@ -37,7 +37,7 @@
 	$properties['flex-basis']	= $stack_active->prepare_css_property_responsive($stack,'','');
 
 	echo $_s->build_css(
-		is_admin() ? '.editor-styles-wrapper .wp-block-columns .wp-block-column' : '.wp-block-columns .wp-block-column',
+		is_admin() ? '.editor-styles-wrapper .wp-block-columns:not(.is-not-stacked-on-mobile) .wp-block-column' : '.wp-block-columns:not(.is-not-stacked-on-mobile) .wp-block-column',
 		array_merge(
 			$properties
 		)
