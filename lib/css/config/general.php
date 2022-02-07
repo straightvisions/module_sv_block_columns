@@ -9,13 +9,13 @@
 	}, $stack_active->get_data());
 	
 	$properties['flex-direction']	= $stack_active->prepare_css_property_responsive($stack,'','');
-	
+	/*
 	$stack = array_map(function ($val) {
 		return $val ? 'wrap' : 'nowrap';
 	}, $stack_active->get_data());
 	
 	$properties['flex-wrap']	= $stack_active->prepare_css_property_responsive($stack,'','');
-
+*/
 	echo $_s->build_css(
 		is_admin() ? '.editor-styles-wrapper .wp-block-columns' : '.wp-block-columns',
 		array_merge(
