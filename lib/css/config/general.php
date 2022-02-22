@@ -9,6 +9,12 @@
 	}, $stack_active->get_data());
 	
 	$properties['flex-direction']	= $stack_active->prepare_css_property_responsive($stack,'','');
+
+	$stack = array_map(function ($val) {
+		return $val ? 'block' : 'flex';
+	}, $stack_active->get_data());
+
+	$properties['display']	= $stack_active->prepare_css_property_responsive($stack,'','');
 	/*
 	$stack = array_map(function ($val) {
 		return $val ? 'wrap' : 'nowrap';
