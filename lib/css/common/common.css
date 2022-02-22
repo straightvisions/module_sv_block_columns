@@ -8,4 +8,5 @@
 .wp-block-columns.is-not-stacked-on-mobile{
 	flex-direction: row !important;
 	flex-wrap: nowrap !important;
+	display:flex !important;
 }
