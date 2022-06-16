@@ -23,7 +23,7 @@
 	$properties['flex-wrap']	= $stack_active->prepare_css_property_responsive($stack,'','');
 */
 	echo $_s->build_css(
-		is_admin() ? '.editor-styles-wrapper .wp-block-columns' : '.wp-block-columns',
+		is_admin() ? '.editor-styles-wrapper .wp-block-columns' : 'div.wp-block-columns',
 		array_merge(
 			$properties,
 			$module->get_setting('padding')->get_css_data('padding'),
