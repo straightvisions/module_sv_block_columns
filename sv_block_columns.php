@@ -12,6 +12,7 @@
 				->set_section_order(5000)
 				->set_section_icon('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 24h-6v-24h6v24zm9-24h-6v24h6v-24zm9 0h-6v24h6v-24z"/></svg>')
 				->set_block_handle('wp-block-columns')
+				->set_block_name('core/columns')
 				->get_root()
 				->add_section( $this );
 		}
@@ -74,25 +75,10 @@
 			parent::register_scripts();
 
 			// Register Styles
-			$this->get_script( 'style_equal_height' )
+			$this->get_script( 'equal-height' )
 				->set_is_gutenberg()
+				->set_block_style(__('Equal Height', 'sv100'))
 				->set_path( 'lib/css/common/style_equal_height.css' );
-
-			$this->get_script( 'style_no_margin_bottom' )
-				->set_is_gutenberg()
-				->set_path( 'lib/css/common/style_no_margin_bottom.css' );
-
-			$this->get_script( 'style_no_margin_bottom_column' )
-				->set_is_gutenberg()
-				->set_path( 'lib/css/common/style_no_margin_bottom_column.css' );
-
-			$this->get_script( 'style_no_margin_column' )
-				->set_is_gutenberg()
-				->set_path( 'lib/css/common/style_no_margin_column.css' );
-
-			$this->get_script( 'style_column_no_margin' )
-				->set_is_gutenberg()
-				->set_path( 'lib/css/common/style_column_no_margin.css' );
 
 			return $this;
 		}
