@@ -14,7 +14,7 @@
 	
 	// margin bottom ---------------------------------------------------------------------------------------------------
 	$stack_max_width = array_map(function ($val) {
-		return $val ? 'var( --sv100_sv_common-max-width-alignwide )' : '100%';
+		return $val ? 'var( --wp--custom--sv-wide-size )' : '100%';
 	}, $stack_active->get_data());
 	
 	$properties['max-width']	= $stack_active->prepare_css_property_responsive($stack_max_width,'','');
