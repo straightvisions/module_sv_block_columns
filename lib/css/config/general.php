@@ -37,7 +37,7 @@
 	$properties					= array();
 
 	$stack = array_map(function ($val) {
-		return $val ? 'auto' : '0';
+		return $val ? 'auto' : 'fit-content';
 	}, $stack_active->get_data());
 
 	$properties['flex-basis']	= $stack_active->prepare_css_property_responsive($stack,'','');
