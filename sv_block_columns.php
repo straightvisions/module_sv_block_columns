@@ -80,6 +80,11 @@
 				->set_block_style(__('Equal Height', 'sv100'))
 				->set_path( 'lib/css/common/style_equal_height.css' );
 
+			$this->get_script( 'fit-content' )
+			     ->set_is_gutenberg()
+			     ->set_block_style(__('Fit Content', 'sv100'))
+			     ->set_path( 'lib/css/common/style_fit_content.css' );
+
 			return $this;
 		}
 	}
