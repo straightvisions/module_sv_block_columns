@@ -46,9 +46,6 @@
 	.wp-block-column[style*=flex-basis] {
 		flex-grow: 0;
 	}
-	.wp-block-column:not(:first-child) {
-		margin-left: 2em;
-	}
 }
 .wp-block-column.is-vertically-aligned-top {
 	align-self: flex-start;

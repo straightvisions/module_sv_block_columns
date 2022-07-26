@@ -24,7 +24,7 @@
 	);
 
 	echo $_s->build_css(
-		is_admin() ? '.editor-styles-wrapper .wp-block-columns' : 'div.wp-block-columns',
+		'div.wp-block-columns',
 		array_merge(
 			$module->get_setting('padding')->get_css_data('padding'),
 			$module->get_setting('margin')->get_css_data(),
@@ -43,7 +43,7 @@
 	$properties['flex-basis']	= $stack_active->prepare_css_property_responsive($stack,'','');
 
 	echo $_s->build_css(
-		is_admin() ? '.editor-styles-wrapper .wp-block-columns:not(.is-not-stacked-on-mobile) .wp-block-column' : '.wp-block-columns:not(.is-not-stacked-on-mobile) .wp-block-column',
+		'.wp-block-columns:not(.is-not-stacked-on-mobile) .wp-block-column',
 		array_merge(
 			$properties
 		)
