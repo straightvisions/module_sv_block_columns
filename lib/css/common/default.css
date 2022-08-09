@@ -43,9 +43,6 @@
 	.wp-block-column {
 		flex-basis: fit-content;
 	}
-	.wp-block-column[style*=flex-basis] {
-		flex-grow: 0;
-	}
 }
 .wp-block-column.is-vertically-aligned-top {
 	align-self: flex-start;
