@@ -30,7 +30,7 @@
 	$properties['margin-bottom']['mobile_landscape'] =  (int)$properties['margin-bottom']['mobile'] == 0 ? $properties['margin-bottom']['mobile'] : ($spacing / 2).'px';
 
 	echo $stack_active->build_css(
-		'.wp-block-columns > .wp-block-column',
+		'.wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column',
 		$properties
 	);
 
