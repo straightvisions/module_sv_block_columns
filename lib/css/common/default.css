@@ -16,13 +16,13 @@
 	padding: var(--wp--custom--sv-spacing);
 }
 .wp-block-columns.are-vertically-aligned-top {
-	align-items: flex-start;
+	align-items: flex-start !important;
 }
 .wp-block-columns.are-vertically-aligned-center {
-	align-items: center;
+	align-items: center !important;;
 }
 .wp-block-columns.are-vertically-aligned-bottom {
-	align-items: flex-end;
+	align-items: flex-end !important;;
 }
 
 .wp-block-column {
