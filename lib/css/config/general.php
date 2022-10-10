@@ -10,12 +10,6 @@
 	
 	$properties['flex-direction']	= $stack_active->prepare_css_property_responsive($stack,'','');
 
-	$stack = array_map(function ($val) {
-		return $val ? 'block' : 'flex';
-	}, $stack_active->get_data());
-
-	$properties['display']	= $stack_active->prepare_css_property_responsive($stack,'','');
-
 	echo $_s->build_css(
 		'div.wp-block-columns:not(.is-not-stacked-on-mobile)',
 		array_merge(
