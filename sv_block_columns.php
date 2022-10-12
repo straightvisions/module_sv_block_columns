@@ -38,7 +38,7 @@
 				->set_default_value(array(
 					'top'		=> '0',
 					'right'		=> 'auto',
-					'bottom'	=> '20px',
+					'bottom'	=> '0',
 					'left'		=> 'auto'
 				))
 				->set_is_responsive(true)
