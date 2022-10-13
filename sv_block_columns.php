@@ -75,15 +75,15 @@
 			parent::register_scripts();
 
 			// Register Styles
-			$this->get_script( 'equal-height' )
+			$this->get_script( 'equal_height' )
 				->set_is_gutenberg()
 				->set_block_style(__('Equal Height', 'sv100'))
-				->set_path( 'lib/css/common/style_equal_height.css' );
+				->set_path( 'lib/css/styles/equal_height.css' );
 
-			$this->get_script( 'fit-content' )
+			$this->get_script( 'fit_content' )
 			     ->set_is_gutenberg()
-			     ->set_block_style(__('Fit Content', 'sv100'))
-			     ->set_path( 'lib/css/common/style_fit_content.css' );
+			     ->set_block_style(__('Fit Content', 'sv100'), 'core/column')
+			     ->set_path( 'lib/css/styles/fit_content.css' );
 
 			return $this;
 		}
