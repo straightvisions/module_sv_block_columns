@@ -12,9 +12,6 @@
 		flex-wrap: nowrap;
 	}
 }
-.wp-block-columns.has-background {
-	padding: var(--wp--custom--sv-spacing);
-}
 .wp-block-columns.are-vertically-aligned-top {
 	align-items: flex-start !important;
 }
