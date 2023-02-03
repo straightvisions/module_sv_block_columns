@@ -82,7 +82,7 @@
 
 			$this->get_script( 'fit_content' )
 			     ->set_is_gutenberg()
-			     ->set_block_style(__('Fit Content', 'sv100'))
+			     ->set_block_style(__('Fit Content', 'sv100'), 'core/column')
 			     ->set_path( 'lib/css/styles/fit_content.css' );
 
 			return $this;
