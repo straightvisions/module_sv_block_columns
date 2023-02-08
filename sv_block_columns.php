@@ -54,20 +54,10 @@
 				->set_default_value(40)
 				->load_type( 'number' );
 
-			$this->get_setting( 'border' )
-				->set_title( __( 'Border', 'sv100' ) )
-				->set_is_responsive(true)
-				->load_type( 'border' );
-
 			$this->get_setting( 'single_padding' )
 				->set_title( __( 'Padding', 'sv100' ) )
 				->set_is_responsive(true)
 				->load_type( 'margin' );
-
-			$this->get_setting( 'single_border' )
-				->set_title( __( 'Border', 'sv100' ) )
-				->set_is_responsive(true)
-				->load_type( 'border' );
 
 			return $this;
 		}

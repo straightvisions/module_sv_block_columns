@@ -6,10 +6,5 @@
 				echo $module->get_setting( 'single_padding' )->form();
 			?>
 		</div>
-		<div class="sv_setting_flex">
-			<?php
-				echo $module->get_setting( 'single_border' )->form();
-			?>
-		</div>
 	</div>
 <?php } ?>

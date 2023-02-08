@@ -2,8 +2,7 @@
 	echo $_s->build_css(
 		'.wp-block-columns .wp-block-column',
 		array_merge(
-			$module->get_setting('single_padding')->get_css_data('padding'),
-			$module->get_setting('single_border')->get_css_data()
+			$module->get_setting('single_padding')->get_css_data('padding')
 		)
 	);
 	
