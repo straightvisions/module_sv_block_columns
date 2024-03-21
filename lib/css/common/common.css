@@ -1,6 +1,9 @@
 .wp-block-columns {
 	justify-content: center;
 }
+.wp-block-column {
+	min-width: min-content;
+}
 /* reset first child */
 .wp-block-columns .wp-block-column:first-child{
 	margin-left:0;
